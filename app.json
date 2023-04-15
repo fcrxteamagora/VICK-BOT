@@ -1,5 +1,5 @@
 {
-    "name": "HPBot",    
+    "name": "Kimjikoin Chatbot",    
     "env": {
         "BOT_TOKEN": {
             "description": "telegram bot token here",
