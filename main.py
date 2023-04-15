@@ -53,9 +53,9 @@ async def chatbotofd(client, message):
     is_vick = vick.find_one({"chat_id": message.chat.id})
     if not is_vick:
         vick.insert_one({"chat_id": message.chat.id})
-        await message.reply_text(f"Chatbot Disabled!")
+        await message.reply_text(f"Kimjikoin Disabled!")
     if is_vick:
-        await message.reply_text(f"ChatBot Is Already Disabled")
+        await message.reply_text(f"Kimjikoin Is Already Disabled")
     
 
 @bot.on_message(
@@ -75,10 +75,10 @@ async def chatboton(client, message):
             )
     is_vick = vick.find_one({"chat_id": message.chat.id})
     if not is_vick:           
-        await message.reply_text(f"Chatbot Is Already Enabled")
+        await message.reply_text(f"Kimjikoin Is Already Enabled")
     if is_vick:
         vick.delete_one({"chat_id": message.chat.id})
-        await message.reply_text(f"ChatBot Is Enable!")
+        await message.reply_text(f"Kimjikoin Is Enable!")
     
 
 @bot.on_message(
